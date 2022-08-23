@@ -51,13 +51,15 @@ main{
 .hero img{
     height: 100vh;
     margin-bottom: -10px;
+    transition: 0.5s;
 }
 
 
 
 /*LOGO CONFIG*/
 .logo{
-    padding: 50px 17vw 0;
+    padding: 50px 20vw 0;
+    transition: 0.5s;
 }
 
 
@@ -67,17 +69,20 @@ h1{
     letter-spacing: 12px;
     font-size: 60px;
     color: var(--color-3);
+    transition: 0.5s;
 }
 .destaque{
     display: block;
     font-weight: 300;
     color: var(--prime-color);
+    transition: 0.5s;
 }
 
 /*MAIN CONTENT*/
 .content{
-    padding: 0 17vw;
+    padding: 0 20vw;
     margin: 0 auto;
+    transition: 0.5s;
 }
 
 
@@ -93,8 +98,9 @@ input[type=email]{
     left: 0; 
     border: 1px solid var(--prime-color);
     border-radius: 20px;
-    padding: 14px;
+    padding: 13px;
     width: 99%;
+    transition: 0.5s;
 }
 input:focus{
     outline: 1px solid #f96262;
@@ -110,8 +116,44 @@ button[type=submit]{
     color: white;
     background-color: var(--color-2);
     background-image: linear-gradient(to right, #ffc4c4, #ff9b9b);
-    border-radius: 20px;
+    border-radius: 21px;
     padding: 11px 34px;
-    top: 1;
+    top: 0;
     right: 0;
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 1260px) {
+
+    .logo{
+        padding: 50px 15vw 0;
+    }
+
+    .content{
+        padding: 0 15vw;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 1100px) {
+
+    .logo{
+        padding: 50px 7vw 0;
+    }
+
+    .content{
+        padding: 0 7vw;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 940px) {
+
+    .logo{
+        padding: 50px 7vw 0;
+    }
+
+    .content{
+        padding: 0 7vw;
+        margin: 0 auto;
+    }
 }

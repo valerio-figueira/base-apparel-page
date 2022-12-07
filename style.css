@@ -20,8 +20,9 @@ body{
     color: var(--prime-color);
     background-color: var(--backgroud-color);
     margin: 0 auto;
-    max-width: var(--desktop);
+    /*max-width: var(--desktop);*/
     min-width: var(--mobile);
+    overflow: hidden;
 }
 
 
@@ -31,13 +32,13 @@ body{
 /*GRID CONFIG*/
 .grid{
     display: grid;
+    grid-template-rows: 200px 1fr;
     grid-template-areas: 
     "header hero"
     "main hero";
 }
 header{
     grid-area: header;
-    margin: 0;
 }
 main{
     grid-area: main;
@@ -49,16 +50,17 @@ main{
 
 /*MAIN IMAGE CONFIG*/
 .hero img{
-    height: 100vh;
-    margin-bottom: -10px;
+    position: sticky;
     transition: 0.5s;
+    height: 100vh;
+    margin-bottom: -7px;
 }
 
 
 
 /*LOGO CONFIG*/
 .logo{
-    padding: 50px 20vw 0;
+    padding: 3rem 30% 0;
     transition: 0.5s;
 }
 
@@ -67,7 +69,7 @@ main{
 h1{
     margin: 0;
     letter-spacing: 12px;
-    font-size: 60px;
+    font-size: 3rem;
     color: var(--color-3);
     transition: 0.5s;
 }
@@ -80,7 +82,7 @@ h1{
 
 /*MAIN CONTENT*/
 .content{
-    padding: 0 20vw;
+    padding: 0 30%;
     margin: 0 auto;
     transition: 0.5s;
 }
@@ -91,6 +93,7 @@ h1{
     position: relative;
     border: none;
     padding: 1px;
+    margin: 3rem -2rem;
 }
 input[type=email]{   
     position: absolute;
@@ -98,7 +101,8 @@ input[type=email]{
     left: 0; 
     border: 1px solid var(--prime-color);
     border-radius: 20px;
-    padding: 13px;
+    padding: 16px;
+    font-size: 1rem;
     width: 99%;
     transition: 0.5s;
 }
@@ -117,7 +121,7 @@ button[type=submit]{
     background-color: var(--color-2);
     background-image: linear-gradient(to right, #ffc4c4, #ff9b9b);
     border-radius: 21px;
-    padding: 11px 34px;
+    padding: 15px 34px;
     top: 0;
     right: 0;
     transition: 0.5s;
@@ -134,6 +138,10 @@ button[type=submit]{
         padding: 0 15vw;
         margin: 0 auto;
     }
+
+    .content .register{
+        margin: 3rem -2rem;
+    }
 }
 @media screen and (max-width: 1100px) {
 
@@ -145,6 +153,9 @@ button[type=submit]{
         padding: 0 7vw;
         margin: 0 auto;
     }
+    .content .register{
+        margin: 3rem -1rem;
+    }
 }
 @media screen and (max-width: 940px) {
 
@@ -155,5 +166,97 @@ button[type=submit]{
     .content{
         padding: 0 7vw;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    h1{
+        font-size: 2.5rem;
+    }
+    .logo{
+        padding: 1.5rem 1.5rem 0;
+    }
+    .content{
+        padding: 0 1.5rem;
+    }
+    .content h1{
+        margin: 0 0 3rem;
+    }
+    .content .register{
+        margin: 3rem 0 0;
+    }
+    .hero img{
+        margin-right: -4.5rem;
+    }
+    input[type=email]{   
+        padding: 16px;
+        font-size: .8rem;
+    }
+    button[type=submit]{
+        padding: 13px 34px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    h1{
+        font-size: 2rem;
+    }
+    .logo{
+        padding: 1.5rem 1.5rem 0;
+    }
+    .content{
+        padding: 0 1.5rem;
+    }
+    .hero{
+        margin-right: -4.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .grid{
+        display: grid;
+        grid-template-rows: 70px 300px;
+        grid-template-areas: 
+        "header header"
+        "hero hero"
+        "main main";
+    }
+
+    body{
+        overflow: initial;
+    }
+
+    .hero{
+        overflow: hidden;
+        background-image: url(images/hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .hero img{
+        display: none;
+    }
+
+    .content .box{
+        padding: 0 20%;
+    }
+    .content .register{
+        margin: 3rem -4rem;
+    }
+    .content h1{
+        margin: 1rem 0;
+        padding: 2rem 0;
+    }
+    .logo{
+        padding: 1rem 1.5rem 0;
+    }
+    .content{
+        padding: 0 1.5rem 7rem;
+    }
+    input[type=email]{   
+        padding: 16px;
+        font-size: .8rem;
+    }
+    button[type=submit]{
+        padding: 13px 34px;
     }
 }
